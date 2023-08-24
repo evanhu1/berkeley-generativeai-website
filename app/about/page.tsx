@@ -5,11 +5,11 @@ const font = Gloock({ subsets: ["latin"], weight: "400" });
 export default function Home() {
   return (
     <main className="flex flex-col text-white place-items-center">
-      <div className="mt-8 w-1/2">
+      <div className="mt-8 md:w-1/2 w-2/3">
         <p className={"text-4xl " + font.className}>
           About Us
         </p>
-        <p className="text-xl mt-4 text-justify">
+        <p className="text-xl mt-4 md:text-justify text-justify">
           Generative AI at Berkeley is the biggest Generative AI student
           organization at UC Berkeley. 
           
