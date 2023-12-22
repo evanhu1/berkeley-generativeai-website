@@ -30,7 +30,7 @@ function NavBar() {
                 href="/apply"
                 className="hidden sm:block py-2 pl-3 pr-4 text-white md:bg-transparent md:text-white md:p-0 dark:text-white md:dark:text-white"
             >
-              <button className="px-3 py-1 text-white bg-[#d152e2] rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-200">
+              <button className="px-3 py-1 text-white bg-[#d152e2] rounded-lg hover:bg-[#a13dae] focus:outline-none focus:ring-2 focus:ring-blue-200">
                 Apply
               </button>
             </a>

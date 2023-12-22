@@ -34,7 +34,7 @@ export default function Home() {
             </button>
         </a>
       <p className={"my-4 text-2xl font-serif"}>
-        Launching Fall 2023
+        Launched Fall 2023
       </p>
     </div>
   );

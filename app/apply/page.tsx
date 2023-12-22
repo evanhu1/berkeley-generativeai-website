@@ -14,7 +14,7 @@ export default function Home() {
           className="block py-1 px-2 md:py-2 md:px-3 text-white md:bg-transparent md:text-white md:p-0 dark:text-white md:dark:text-white"
           target="blank"
         >
-          <button className="mt-4 px-4 py-1 md:px-8 md:py-3 text-lg text-white bg-[#18a2a6] rounded-lg hover:bg-[#0b6e71] focus:outline-none focus:ring-2 focus:ring-blue-200">
+          <button className="mt-4 px-4 py-1 md:px-8 md:py-3 text-lg text-white bg-[#d152e2] rounded-lg hover:bg-[#a13dae] focus:outline-none focus:ring-2 focus:ring-blue-200">
             Apply
           </button>
         </a>
@@ -42,7 +42,7 @@ export default function Home() {
           className="block py-1 px-2 md:py-2 md:px-3 text-white md:bg-transparent md:text-white md:p-0 dark:text-white md:dark:text-white"
           target="blank"
         >
-          <button className="mt-4 px-4 py-1 md:px-8 md:py-3 text-lg text-white bg-[#18a2a6] rounded-lg hover:bg-[#0b6e71] focus:outline-none focus:ring-2 focus:ring-blue-200">
+          <button className="mt-4 px-4 py-1 md:px-8 md:py-3 text-lg text-white bg-[#d152e2] rounded-lg hover:bg-[#a13dae] focus:outline-none focus:ring-2 focus:ring-blue-200">
             Apply
           </button>
         </a>
