@@ -1,7 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import NavBar from './components/NavBar';
-import Footer from './components/Footer';
+
+import Companies from './components/Companies';
 
 export const metadata: Metadata = {
   title: 'Generative AI at Berkeley',
@@ -19,13 +20,16 @@ export default function RootLayout({
       <head>
         <link rel='icon' href='/favicon.ico'/>
       </head>
-      <body className='font-sans bg-zinc-950 h-fit'>
-        <div className='relative min-h-screen'>
-          <div className='pb-64'>
-            <NavBar></NavBar>
-            {children}
-          </div>
-          <Footer></Footer>
+      <body className='font-sans bg-zinc-950 h-fit backdrop-brightness-75' style={{
+        backgroundImage: `url('/bg.jpg')`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
+        opacity: '100%',}}>
+        <div className='relative min-h-screen flex flex-col'>
+          <NavBar></NavBar>
+          {children}
+          <Companies></Companies>
         </div>
       </body>
     </html>
