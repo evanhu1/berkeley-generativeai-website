@@ -1,30 +1,37 @@
 import React from 'react';
-import { Open_Sans } from 'next/font/google';
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
+// Assume Open_Sans has been imported elsewhere as needed
 
-const font = Open_Sans({ subsets: ['latin'], weight: '500' });
 
 const metrics = [
-    { number: '4', label: 'Projects Completed' },
-    { number: '71', label: 'Active members' },
+    { number: 4, label: 'Clients so far' },
+    { number: 71, label: 'Members' },
 ];
 
-
 const MetricsSection = () => {
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.5,
+    });
+
     return (
-        <div className="flex justify-around items-center py-8">
+        <div ref={ref} className="flex justify-around items-center py-8">
             {metrics.map((metric, index) => (
-                <div key={index} className="text-center space-y-2">
-                    <div className="w-4" style={{ marginLeft: '12rem' }}></div>
-                    <div className="text-4xl font-bold" style={{ fontFamily: font }}>
-                        {metric.number}
+                <div key={index} className="text-center space-y-2" style={{marginLeft: '1rem'}}>
+                    {/* Removed the marginLeft style for clarity; adjust as needed */}
+                    <div className="text-4xl font-bold" style={{ fontFamily: '"Open Sans", sans-serif' }}>
+                        {inView ? (
+                            <CountUp end={metric.number} duration={2} />
+                        ) : (
+                            '0'
+                        )}
                     </div>
-                    <div className="text-base text-gray-700">{metric.label}</div>
+                    <div className="text-base text-gray-700" style={{ fontFamily: '"Open Sans", sans-serif' }}>{metric.label}</div>
                 </div>
             ))}
         </div>
     );
 };
 
-export default function Metrics() {
-    return <MetricsSection />;
-}
+export default MetricsSection;

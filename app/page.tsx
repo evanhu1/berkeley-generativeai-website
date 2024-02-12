@@ -1,3 +1,5 @@
+'use client';
+
 import { Open_Sans } from "next/font/google";
 import { Source_Code_Pro } from "next/font/google";
 import Head from 'next/head'
@@ -7,13 +9,46 @@ import Envolvement from "./components/Envolvement";
 import MetricsSection from "./components/MetricsSection";
 import ParticlesBackground from "./components/ParticlesBackground";
 import Image from 'next/image';
+import Terminal from './components/Terminal';
+import Footer from "./components/Footer";
+
+import React, { useEffect } from 'react';
+
+import { useInView } from 'react-intersection-observer';
+
 
 const font = Open_Sans({ subsets: ["latin"], weight: "300" });
-const font2 = Open_Sans({ subsets: ["latin"], weight: "500" });
+const font2 = Open_Sans({ subsets: ["latin"], weight: "300" });
 
 
 
 export default function Home() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
+  const { ref: socialOutreachRef, inView: socialOutreachInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const { ref: educationRef, inView: educationInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const { ref: projectsRef, inView: projectsInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+
+
+
+
+
   return (
     <div className="flex flex-col text-white place-items-center h-full mt-12">
       <div className={"mt-12 w-2/3 flex flex-col text-center place-items-center text-4xl md:text-7xl leading-[1] " + font.className}>
@@ -34,7 +69,6 @@ export default function Home() {
       >
         <div className="my-4">
           <ApplyButton />
-          
         </div>
       </a>
       <a
@@ -43,7 +77,11 @@ export default function Home() {
         aria-current="page"
       >
         <ApplyButton />
+
+
+        
       </a>
+      <Terminal></Terminal>
       <div style={{marginBottom: '26vh'}}></div>
       <Companies></Companies>
       <div style={{marginBottom: '2rem'}}></div>
@@ -54,12 +92,19 @@ export default function Home() {
 
 
       {/* put a centered heading here saying "our committees" in font2 */}
-      <h2 className={font2.className} style={{ fontSize: '3.5rem', fontWeight: 'bold'}}> Our Sections</h2>
+      <h2 className={font2.className} style={{ fontSize: '3.5rem', fontWeight: 'bold', marginLeft: 0 }}>Our Sections</h2>
 
+      {/*Text under heading to explain:
+
+Generative AI @ Berkeley is comprised of 3 main sections, Social & Outreach, Education, and Projects. Each section leads various organizational initiatives such as philanthropy,  industrial relations & partnerships, campus relations & partnerships, projects, research, and more.}*/}
+  
+      <p style={{ maxWidth: '50vw', margin: '0 auto', wordWrap: 'break-word', textAlign:'center', marginBottom: '2rem', marginTop: '2rem'}}>
+        Generative AI @ Berkeley is comprised of 3 main sections, Social & Outreach, Education, and Projects. Each section leads various organizational initiatives such as philanthropy, industrial relations & partnerships, campus relations & partnerships, projects, research, and more.
+      </p>
       
     {/* SOCIAL OUTREACH */}
       
-      <div className="w-full flex" style={{ backgroundColor: '#1a1a1a'}}>
+    <div ref={socialOutreachRef} className={`w-full flex ${socialOutreachInView ? 'fadeInSection' : ''}`} style={{ backgroundColor: '#1a1a1a'}}>
         <div className="w-1/2 flex justify-start items-left" style={{ marginTop: '1rem', marginLeft: '15rem'}}>
           {/* Left side content */}
           <div className="text-left">
@@ -98,7 +143,7 @@ export default function Home() {
       <div style={{ height: '2rem', width: '100%', background: 'linear-gradient(to right, white, #1a1a1a)' }}></div>
 
       {/* EDUCATION */}
-      <div className="w-full flex" style={{ backgroundColor: 'white'}}>
+      <div ref={educationRef} className={`w-full flex ${educationInView ? 'fadeInSection' : ''}`} style={{ backgroundColor: 'white'}}>
       <div className="w-1/2 flex justify-start items-left" style={{ marginTop: '1rem', marginLeft: '15rem'}}>
           {/* Left side content */}
           <div className="text-left">
@@ -131,7 +176,7 @@ export default function Home() {
 
       {/* PROJECTS */}
 
-      <div className="w-full flex" style={{ backgroundColor: '#1a1a1a'}}>
+      <div ref={projectsRef} className={`w-full flex ${projectsInView ? 'fadeInSection' : ''}`} style={{ backgroundColor: '#1a1a1a'}}>
       <div className="w-1/2 flex justify-start items-left" style={{ marginTop: '1rem', marginLeft: '15rem'}}>
           {/* Left side content */}
           <div className="text-left" style={{}}>
@@ -157,7 +202,13 @@ export default function Home() {
             <div style={{marginBottom: '2rem'}}></div>
           </div>
         </div>
-      </div>      
+      </div>     
+      <div style={{marginBottom: '10rem'}}></div>
+      <Footer></Footer>
+
+      
     </div>
+    
   );
 }
+

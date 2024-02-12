@@ -1,6 +1,6 @@
-import { Gloock } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 
-const font = Gloock({ subsets: ["latin"], weight: "400" });
+const font = Open_Sans({ subsets: ["latin"], weight: "400" });
 
 export default function Home() {
   return (

@@ -26,6 +26,14 @@ function NavBar() {
                 About
               </a>
             </li>
+            <li>
+              <a
+                href="/team"
+                className="hidden sm:block py-2 pl-3 pr-4 text-white md:bg-transparent md:text-white md:p-0 dark:text-white md:dark:text-white"
+              >
+                Our Team
+              </a>
+            </li>
             <a
                 href="/apply"
                 className="hidden sm:block py-2 pl-3 pr-4 text-white md:bg-transparent md:text-white md:p-0 dark:text-white md:dark:text-white"

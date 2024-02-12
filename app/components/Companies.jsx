@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
+
 function Companies() {
   const logos = [
     { src: '/y-combinator.png', alt: 'Y Combinator Logo' },
@@ -11,7 +12,7 @@ function Companies() {
     { src: '/OpenAI_Logo.svg.webp', alt: 'Quizlet Logo' },
     // ... other logos
   ];
-
+  
   return (
     <div className="flex flex-col items-center w-full mt-4" style={{ backgroundColor: '#1a1a1a'}}>
       <h2 className="bg-gradient-to-r from-[#b18dff] to-[#cf44ba] text-transparent bg-clip-text" style={{  marginTop: 12 }}>Who we work with</h2>

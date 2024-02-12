@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import NavBar from './components/NavBar';
 
 import Companies from './components/Companies';
+import Footer from './components/Footer';
 
 export const metadata: Metadata = {
   title: 'Generative AI at Berkeley',
@@ -27,7 +28,10 @@ export default function RootLayout({
           {children}
           
         </div>
+        
       </body>
+
+
     </html>
   )
 }
