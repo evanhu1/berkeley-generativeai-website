@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import { Gloock } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 
-const font = Gloock({ subsets: ["latin"], weight: "400" });
+const font = Open_Sans({ subsets: ["latin"], weight: "500" });
 
 function NavBar() {
   return (
@@ -11,7 +11,7 @@ function NavBar() {
         <a href="/">
           <div className="flex flex-row place-items-center">
             <Image src={'/logo.png'} alt="logo" width={100} height={100} className="w-20 md:w-24"></Image>
-            <h1 className={"text-xl md:text-2xl text-white " + font.className}>
+            <h1 className={"text-xl md:text-xl text-white " + font.className}>
               GENERATIVE AI<br></br>@ BERKELEY
             </h1>
           </div>

@@ -20,16 +20,12 @@ export default function RootLayout({
       <head>
         <link rel='icon' href='/favicon.ico'/>
       </head>
-      <body className='font-sans bg-zinc-950 h-fit backdrop-brightness-75' style={{
-        backgroundImage: `url('/bg.jpg')`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed',
+      <body className='font-sans bg-gray-900 h-fit backdrop-brightness-75' style={{
         opacity: '100%',}}>
         <div className='relative min-h-screen flex flex-col'>
           <NavBar></NavBar>
           {children}
-          <Companies></Companies>
+          
         </div>
       </body>
     </html>
