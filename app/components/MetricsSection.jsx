@@ -20,7 +20,7 @@ const MetricsSection = () => {
             {metrics.map((metric, index) => (
                 <div key={index} className="text-center space-y-2" style={{marginLeft: '1rem'}}>
                     {/* Removed the marginLeft style for clarity; adjust as needed */}
-                    <div className="text-4xl font-bold" style={{ fontFamily: '"Open Sans", sans-serif' }}>
+                    <div className="text-4xl font-bold text-black" style={{ fontFamily: '"Open Sans", sans-serif' }}>
                         {inView ? (
                             <CountUp end={metric.number} duration={2} />
                         ) : (

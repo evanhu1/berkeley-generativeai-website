@@ -38,9 +38,6 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center h-full mt-12 px-4 md:px-0 text-white">
-      <Head>
-        {/* Head content like title, meta tags for SEO, etc. */}
-      </Head>
 
       {/* Header Section */}
       <div className={`mt-12 w-full md:w-2/3 flex flex-col items-center text-center text-3xl md:text-7xl leading-tight ${font.className}`}>
@@ -49,7 +46,7 @@ export default function Home() {
           Artificial Generative Intelligence
         </p>
         <p className="text-lg mt-12">
-          We are Berkeley's largest generative AI organization, founded in the fall of 2023. Our mission is to blend algorithmic innovation with creative thought, demystifying generative AI and fostering an environment for technological and creative advancement. As a student-led community, we are dedicated to equipping students across disciplines with the knowledge and skills to harness the power of generative AI. Through active collaboration, education, and ethical exploration, we pioneer intelligent solutions and expand the reach of generative AI's benefits.
+          We are the largest generative AI organization at UC Berkeley, founded in the fall of 2023. Our mission is to blend algorithmic innovation with creative thought, demystifying generative AI and fostering an environment for technological and creative advancement. As a student-led community, we are dedicated to equipping students across disciplines with the knowledge and skills to harness the power of generative AI. Through active collaboration, education, and ethical exploration, we pioneer intelligent solutions and expand the reach of the benefits of generative AI.
         </p>
       </div>
 
@@ -66,22 +63,23 @@ export default function Home() {
       {/* Placeholder for additional sections */}
       <div className="mb-26vh"></div>
       <Companies />
+      <div className='w-full bg-white'>
       <div className="mb-8"></div>
-      <MetricsSection />
+      <MetricsSection/>
       <div className="mb-8"></div>
 
       {/* Our Sections Heading */}
-      <h2 className={`${font2.className} text-3xl md:text-4xl font-bold text-center`}>
-        Our Sections
+      <h2 className={`${font2.className} text-3xl md:text-4xl font-bold text-center text-black`}>
+        Our Divisions
       </h2>
 
       {/* Sections Description */}
-      <p className="max-w-2xl text-center mx-auto my-4">
-      Generative AI @ Berkeley is comprised of 3 main sections, Social & Outreach, Education, and Projects. Each section leads various organizational initiatives such as philanthropy, industrial relations & partnerships, campus relations & partnerships, projects, research, and more.
+      <p className="max-w-2xl text-center mx-auto my-4 text-black">
+      Generative AI @ Berkeley is comprised of 3 main divisions, Social & Outreach, Education, and Projects. Each section leads various organizational initiatives such as philanthropy, industrial relations & partnerships, campus relations & partnerships, projects, research, and more.
       </p>
 
       {/* Social Outreach Section */}
-      <div className={`w-full flex flex-col md:flex-row ${socialOutreachInView ? 'fadeInSection' : ''}`} style={{ backgroundColor: '#1a1a1a' }}>
+      <div className={`w-full flex flex-col md:flex-row ${socialOutreachInView ? 'fadeInSection' : ''}`} style={{ backgroundColor: '#1a1a1a'}}>
         {/* Left side content */}
         <div className="md:w-1/2 p-4">
           <h2 className={`${font2.className} text-xl md:text-2xl font-bold`}>Social & Outreach</h2>
@@ -90,7 +88,7 @@ export default function Home() {
         {/* Right side content - Image */}
         <div className="md:w-1/2 p-4">
           <div className="relative h-64 w-full">
-            <Image src="/volunteer.svg" alt="Volunteer" layout="fill" objectFit="contain" />
+            <Image src="/volunteer.svg" alt="Volunteer" layout="fill" objectFit="contain" style={{filter: 'brightness(0) invert(1)' }} />
           </div>
         </div>
       </div>
@@ -122,9 +120,10 @@ export default function Home() {
         {/* Right side content - Image */}
         <div className="md:w-1/2 p-4">
           <div className="relative h-64 w-full">
-            <Image src="/project.svg" alt="Projects" layout="fill" objectFit="contain" />
+            <Image src="/project.svg" alt="Projects" layout="fill" objectFit="contain" style={{ filter: 'brightness(0) invert(1)' }} />
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

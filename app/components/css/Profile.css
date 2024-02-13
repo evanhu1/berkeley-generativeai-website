@@ -6,7 +6,6 @@
     justify-content: center;
 }
 
-
 .card {
     position: relative;
     width: 35rem;
@@ -23,41 +22,20 @@
     cursor: pointer;
 }
 
-.name {
-    margin-top: 3rem;
-    font-weight: 700;
-    font-size: 1em;
-    letter-spacing: 1.4px;
+.name, .position, .class, .email {
     color: white;
+}
+
+.funfact {
+    background: linear-gradient(90deg, #71e0ff, #d6abff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .profilePicture {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
-
-.class,
-.email {
-    font-weight: 500;
-    font-size: 0.8em;
-    letter-spacing: 1.4px;
-    color: rgb(197, 197, 197);
-}
-
-.position {
-    font-size: 2em;
-    color: #f8f8f2;
-}
-
-.funfact {
-    font-size: 0.8em;
-    font-weight: 500;
-    color: #8be9fd;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-
 
 .minmaxContainer {
     width: 100%;
@@ -66,8 +44,7 @@
     justify-content: space-between;
 }
 
-.min,
-.max {
+.min, .max {
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -82,181 +59,121 @@
     border-left: 2px solid white;
 }
 
-.majorHeading,
-.hometownHeading {
-    font-size: 0.8em;
-    font-weight: 600;
+.majorHeading, .hometownHeading, .major, .hometown {
     color: white;
 }
 
-.major,
-.hometown {
-    font-size: 0.7em;
-    font-weight: 500;
-    color: rgb(197, 197, 197);
-    
-}
-
-.topRightButton {
-    position: absolute;
-    top: 15px; /* Adjust based on your design */
-    right: 15px; /* Adjust based on your design */
-    margin-bottom: 5rem;
-    /* Other button styles as needed */
-}
-
-button {
+.topRightButton, button {
     font-size: 17px;
     padding: 0.5em 2em;
-    border: transparent;
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    border: none;
     background: dodgerblue;
     color: white;
     border-radius: 4px;
-   }
-   
-   button:hover {
-    background: rgb(2,0,36);
+}
+
+button:hover {
     background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
-   }
-   
-   button:active {
+}
+
+button:active {
     transform: translate(0em, 0.2em);
-   }
+}
 
-   .profileImageContainer {
-    width: 10rem; /* Fixed width */
-    height: 10rem; /* Fixed height */
-    border-radius: 10%; /* Circular images */
-    overflow: hidden; /* Ensures the image does not break out of the border radius */
-    display: flex; /* Helps center the image */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-  }
-  
-  .profileImage {
-    object-fit: cover; /* Cover the container without distorting the image */
-    width: 100%; /* Fill the container */
-    height: 100%; /* Fill the container */
-    /* Purple Border */
-  }
-  
+.profileImageContainer {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 10%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-  .profilesContainer {
-    position: relative; /* Needed for absolute positioning of the header */
+.profilesContainer, .sectionContainer {
+    position: relative;
     width: 75vw;
-    background-color: #282a36;
     padding: 15rem;
     border-radius: 8px;
     margin: 0 auto;
-    padding-top: 7rem; /* Increase top padding to make space for the header */
-  }
-  
-  .leadershipHeader {
+    padding-top: 7rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.089);
+}
+
+.leadershipHeader, .headerRight, .headerLeft {
     font-family: 'Source Code Pro', monospace;
     color: white;
     margin-bottom: 1rem;
-    font-size: large;
-}
-.headerRight, .headerLeft {
-    font-family: 'Source Code Pro', monospace;
-    
-    font-size: larger;
-    font-weight: 300;
-    position: absolute;
-    top: 5rem;
-    margin-bottom: 5rem;
-    
 }
 
-.headerRight {
-    right: 5rem;
-}
-
-.headerLeft {
-   
-    left: 5rem;
-}
-  
-  
-.modalBackground {
-    position: fixed; /* or 'fixed' to ensure it covers the entire viewport */
-    top: 0;
-    left: 0;
-}
-
-.headerRight, .headerLeft {
-    font-family: 'Source Code Pro', monospace;
-    color: white;
-    font-size: large;
-    position: absolute;
-    top: 5rem; /* Adjust if necessary based on your design needs */
-    margin-bottom: 5rem;
-}
-
-.headerRight {
-    right: 5rem;
-}
-
-.headerLeft {
-    left: 5rem;
-}
-  
-  
 .modalBackground {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed; /* Stick to viewport */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000; /* High z-index to ensure it's on top */
-  }
-  
-  .modalContent {
-    max-height: 80vh; /* Limit the height of the modal to 80% of the viewport height */
-    overflow-y: auto; /* Allows scrolling within the modal if content exceeds its max-height */
-    width: 90%; /* Or your preferred width */
-    max-width: 600px; /* Or your preferred max-width */
-    padding: 20px;
-    border-radius: 8px;
-    position: relative; /* For positioning close button or other elements absolutely within */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Optional: Adds a shadow for better visual hierarchy */
-  }
-  
+    z-index: 1000;
+}
 
 .modalContent {
-    overflow-y: auto; /* Enables scrolling within the modal if the content overflows */
-    max-height: 80vh; /* Limits the modal's height to 80% of the viewport height */
-}
-  
-  .sectionContainer {
-    border-top: 1px solid #44475a;
-    position: relative;
-    margin-bottom: 2rem;
-    width: 75vw;
-    padding-left: 20rem;
-    padding-right: 20rem;
-    padding-top: 6rem; /* Adjust this value as needed to ensure headers don't overlap pictures */
+    max-height: 80vh;
+    overflow-y: auto;
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
     border-radius: 8px;
-    margin: 0 auto;
-    margin-bottom: 5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* In your CSS file */
 @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  .animate-fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animate-fadeIn {
     animation: fadeIn 1s forwards;
-  }
-  
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .name, .position, .funfact, .class, .email {
+        font-size: 0.9em;
+    }
+
+    .min, .max {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .max {
+        border-left: none;
+    }
+
+    .sectionContainer, .profilesContainer {
+        width: 90vw;
+        padding: 10px;
+        padding-top: 3rem;
+        
+    }
+
+    .headerRight, .headerLeft {
+        font-size: medium;
+        top: 2rem;
+        right: 10px;
+        left: 10px;
+    }
+
+    .modalContent {
+        width: 80%;
+    }
+}
