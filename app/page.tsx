@@ -9,7 +9,6 @@ import Companies from "./components/Companies";
 import ApplyButton from "./modules/dynamicButton";
 import Envolvement from "./components/Envolvement";
 import MetricsSection from "./components/MetricsSection";
-import ParticlesBackground from "./components/ParticlesBackground";
 import Terminal from './components/Terminal';
 import Footer from "./components/Footer";
 
