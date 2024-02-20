@@ -18,6 +18,7 @@ function Companies() {
       <div className="flex flex-col space-y-8 md:flex-row justify-around items-center w-full px-10">
         {logos.map((logo, index) => (
             <Image
+              key={index}
               src={logo.src}
               alt={logo.alt}
               width={1000}
