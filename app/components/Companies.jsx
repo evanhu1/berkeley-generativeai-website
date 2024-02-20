@@ -10,23 +10,21 @@ function Companies() {
     { src: '/sameday.svg', alt: 'Sameday Logo' },
     { src: '/Quizlet-Logo.png', alt: 'Quizlet Logo' },
     { src: '/OpenAI_Logo.svg.webp', alt: 'Quizlet Logo' },
-    // ... other logos
   ];
   
   return (
-    <div className="flex flex-col items-center w-full mt-4" style={{ backgroundColor: '#1a1a1a'}}>
-      <h2 className="bg-gradient-to-r from-[#b18dff] to-[#cf44ba] text-transparent bg-clip-text" style={{  marginTop: 12 }}>Who we work with</h2>
-      <div className="flex justify-around items-center w-full px-10">
+    <div className="py-16 flex flex-col items-center w-full mt-4 bg-[#1a1a1a]">
+      {/* <h2 className="md:text-4xl mb-8 bg-gradient-to-r from-[#b18dff] to-[#cf44ba] text-transparent bg-clip-text" style={{  marginTop: 12 }}>Who We Work With</h2> */}
+      <div className="flex flex-col space-y-8 md:flex-row justify-around items-center w-full px-10">
         {logos.map((logo, index) => (
-          <div key={index} className="relative h-16 w-24"> {/* Updated height to h-16 */}
             <Image
               src={logo.src}
               alt={logo.alt}
-              layout="fill"
-              objectFit="contain"
+              width={1000}
+              height={20}
               style={{ filter: 'brightness(0) invert(1)' }}
+              className='relative h-12 w-auto'
             />
-          </div>
         ))}
       </div>
     </div>

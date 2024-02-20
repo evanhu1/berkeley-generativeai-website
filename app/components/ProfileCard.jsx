@@ -17,8 +17,6 @@ const ProfileCard = ({ profile }) => { // Accept a single profile as a prop
         <div className="cardContainer">
             <div className="card">
                 <button className="topRightButton" onClick={handleRedirect}>Coffee Chat</button>
-                
-                
                 <Image 
                     className="profilePicture"
                     src={profile.imageUrl}

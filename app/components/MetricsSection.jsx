@@ -16,18 +16,17 @@ const MetricsSection = () => {
     });
 
     return (
-        <div ref={ref} className="flex justify-around items-center py-8">
+        <div ref={ref} className="flex flex-row justify-around md:px-64 items-center bg-[#1a1a1a] w-full pb-16">
             {metrics.map((metric, index) => (
                 <div key={index} className="text-center space-y-2" style={{marginLeft: '1rem'}}>
-                    {/* Removed the marginLeft style for clarity; adjust as needed */}
-                    <div className="text-4xl font-bold text-black" style={{ fontFamily: '"Open Sans", sans-serif' }}>
+                    <div className="text-4xl font-bold text-white" style={{ fontFamily: '"Open Sans", sans-serif' }}>
                         {inView ? (
                             <CountUp end={metric.number} duration={2} />
                         ) : (
                             '0'
                         )}
                     </div>
-                    <div className="text-base text-gray-700" style={{ fontFamily: '"Open Sans", sans-serif' }}>{metric.label}</div>
+                    <div className="text-base text-white" style={{ fontFamily: '"Open Sans", sans-serif' }}>{metric.label}</div>
                 </div>
             ))}
         </div>

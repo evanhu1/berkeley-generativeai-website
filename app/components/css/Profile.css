@@ -65,7 +65,8 @@
 
 .topRightButton, button {
     font-size: 17px;
-    padding: 0.5em 2em;
+    padding: 0.2em 1em;
+    margin-left: 1em;
     border: none;
     background: dodgerblue;
     color: white;
@@ -74,10 +75,6 @@
 
 button:hover {
     background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
-}
-
-button:active {
-    transform: translate(0em, 0.2em);
 }
 
 .profileImageContainer {
@@ -108,11 +105,9 @@ button:active {
 
 .modalBackground {
     display: flex;
-    align-items: center;
     justify-content: center;
     position: fixed;
-    top: 0;
-    left: 0;
+    /* bottom: 0; */
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
@@ -121,12 +116,15 @@ button:active {
 
 .modalContent {
     max-height: 80vh;
-    overflow-y: auto;
     width: 90%;
+    position: fixed;
     max-width: 600px;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    /* box-shadow: 0 4px 6px rgba(0,0,0,0.1); */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @keyframes fadeIn {
@@ -163,14 +161,6 @@ button:active {
         width: 90vw;
         padding: 10px;
         padding-top: 3rem;
-        
-    }
-
-    .headerRight, .headerLeft {
-        font-size: medium;
-        top: 2rem;
-        right: 10px;
-        left: 10px;
     }
 
     .modalContent {

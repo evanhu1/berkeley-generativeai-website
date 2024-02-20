@@ -47,8 +47,8 @@ export default function Home() {
   const profilesBySection = groupProfilesBySection(profiles as Profile[]);
 
   return (
-    <main className="flex flex-col items-center text-white w-full">
-      <div className="mt-8">
+    <main className="flex flex-col text-white w-full ">
+      <div className="mt-8 flex flex-col">
         {Object.entries(profilesBySection).map(([section, sectionProfiles], index) => (
           <div key={index} className="sectionContainer" style={{ position: 'relative', paddingTop: '2rem' }}>
             <h2 className={`extraLarge ${index % 2 === 0 ? 'headerRight' : 'headerLeft'}`}>{section}</h2>
@@ -62,7 +62,7 @@ export default function Home() {
       </div>
       {isModalOpen && selectedProfile && (
         <div className="modalBackground">
-          <div className="modalContent">
+          <div className="modalContent space-y-4">
             <ProfileCardDynamic profile={selectedProfile} />
             <button onClick={closeModal}>Close</button>
           </div>
