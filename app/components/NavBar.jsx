@@ -17,7 +17,7 @@ function NavBar() {
           </div>
         </a>
         <div className="flex w-auto mr-4" id="navbar-default">
-          <ul className="flex flex-row space-x-8 items-center">
+          <ul className="flex flex-row space-x-4 items-center">
             <li>
               <a
                 href="/team"
@@ -32,6 +32,14 @@ function NavBar() {
             >
               <button className="px-3 py-1 text-white bg-purple-500/50 rounded-lg hover:bg-purple-200/50 focus:outline-none focus:ring-2 focus:ring-blue-200">
                 Apply
+              </button>
+            </a>
+            <a
+                href="/decal"
+                className="hidden sm:block py-2 pl-3 pr-4 text-white md:bg-transparent md:text-white md:p-0 dark:text-white md:dark:text-white"
+            >
+              <button className="px-3 py-1 text-white bg-purple-500/50 rounded-lg hover:bg-purple-200/50 focus:outline-none focus:ring-2 focus:ring-blue-200">
+                Decal
               </button>
             </a>
           </ul>
